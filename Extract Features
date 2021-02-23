@@ -1,0 +1,8 @@
+import requests
+def download() -> dict:
+    payload = {'client_id':'_______________________','image_keys':'___________'}
+    r = requests.get("https://a.mapillary.com/v3/object_detections/segmentations",params=payload)
+    a = r.json()
+    return a
+a=(download())
+print(a)
